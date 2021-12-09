@@ -20,6 +20,7 @@ int main()
 	Dollar* s1 = new Dollar(9000);
 	Dollar* s2 = new Dollar(300);
 	Dollar* s3 = new Dollar(200);
+	Dollar* s3 = new Dollar(200);
 
 	CompteEpargnePayant* cmpt1 = new CompteEpargnePayant(c1, s1, s3, 2);
 	CompteEpargnePayant* cmpt2 = new CompteEpargnePayant(c2, s1, s3, 2);
