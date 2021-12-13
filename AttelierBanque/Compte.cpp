@@ -71,11 +71,9 @@ bool Banque::Compte::verser(Devise* M, Compte& C)
 	if (typeid(M) == typeid(C.solde))
 	{
 
-		this->solde->afficher();
+		//this->solde->afficher();
 		if (this->debiter(M) == true) {
-			this->solde->afficher();
 			C.crediter(M);
-			C.solde->afficher();
 			return true;
 		}
 		return false;
