@@ -2,10 +2,10 @@
 #include"CompteEpargne.h"
 #include"ComptePayant.h"
 namespace Banque {
-	class CompteEpargnePayant : public CompteEpargne,  public ComptePayant
+	class CompteEpargnePayant :virtual public CompteEpargne, virtual public ComptePayant
 	{
 	public:
-		CompteEpargnePayant( Devise*, Devise*, double);
+		CompteEpargnePayant(Client*, Devise*, Devise*, double);
 		bool debiter(Devise*);
 	};
 };

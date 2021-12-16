@@ -1,6 +1,6 @@
 #include "CompteCourant.h"
 #include <assert.h>
-Banque::CompteCourant::CompteCourant(Devise*s, Devise*d) : Compte(s)
+Banque::CompteCourant::CompteCourant(Client*c, Devise*s, Devise*d) : Compte(c, s)
 {
 	assert(*s >= *d);
 	this->Decouvert = d;

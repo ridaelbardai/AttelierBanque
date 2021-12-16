@@ -1,6 +1,6 @@
 #include "CompteEpargnePayant.h"
 
-Banque::CompteEpargnePayant::CompteEpargnePayant(Devise *D, Devise *E, double d):CompteCourant(D, E), Compte(D), CompteEpargne(D, d), ComptePayant(D, E)
+Banque::CompteEpargnePayant::CompteEpargnePayant(Client *C, Devise *D, Devise *E, double d):CompteCourant(C, D, E), Compte(C, D), CompteEpargne(C, D, d), ComptePayant(C, D, E)
 {
 }
 

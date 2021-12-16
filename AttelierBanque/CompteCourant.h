@@ -5,7 +5,7 @@ namespace Banque {
 	{
 
 	public:
-		CompteCourant( Devise*, Devise*);
+		CompteCourant(Client*, Devise*, Devise*);
 		bool debiter(Devise* M);
 
 	private:

@@ -1,7 +1,7 @@
 #include "ComptePayant.h"
 
 
-Banque::ComptePayant::ComptePayant( Devise *D, Devise *E) :CompteCourant( D, E),Compte(D)
+Banque::ComptePayant::ComptePayant(Client *C, Devise *D, Devise *E) :CompteCourant(C, D, E),Compte(C,D)
 {
 }
 

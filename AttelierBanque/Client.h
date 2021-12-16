@@ -16,12 +16,11 @@ namespace Banque {
 		string nom;
 		string prenom;
 		string adresse;
-		vector<Compte*> listeComptes; //composition
+		vector<Compte> listeComptes; //composition
 
 	public:
 		Client(string, string, string);
-		void ajouterCompte(Compte* c);
 		void Afficher();
-		~Client();
+		//void addCompte(Compte& c);
 	};
 };

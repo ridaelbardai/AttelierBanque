@@ -12,9 +12,10 @@ using namespace Banque;
 Devise* Banque::Compte::plafond = new Banque::Devise(2000);
 int Banque::Compte::count = 0;
 
-Banque::Compte::Compte(Devise* sol) :numcompte(++count)
+Banque::Compte::Compte(Client* titu, Devise* sol) :numcompte(++count)
 {
 	this->ref = new GC(1);
+	this->titulaire = titu;
 	this->solde = sol;
 	this->historique = vector<Operations*>();
 }
@@ -82,11 +83,10 @@ bool Banque::Compte::verser(Devise* M, Compte& C)
 
 void Banque::Compte::consulter() const
 {
-	cout << "\tnum compte=" << this->numcompte << endl;
-	cout << "\tsolde : "; this->solde->afficher();
-	cout << "\n\t******************";
-	this->afficherhistorique();
-	
+	cout << "num compte=" << this->numcompte << endl;
+	cout << "solde : "; this->solde->afficher();
+	cout << "\n[ titulaire ] " << endl;
+	this->titulaire->Afficher();
 }
 
 void Banque::Compte::afficherhistorique() const

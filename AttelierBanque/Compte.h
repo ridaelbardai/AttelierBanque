@@ -18,11 +18,10 @@ namespace Banque {
 		static Devise* plafond;
 		GC* ref;
 		vector<Operations*> historique;
-
 		// Methodes
 	public:
-		
-		Compte(Devise*); // avec parametres
+
+		Compte(Client*, Devise*); // avec parametres
 		Compte(const Compte&);
 		Compte operator=(const Compte&);
 
