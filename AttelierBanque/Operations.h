@@ -11,7 +11,7 @@ namespace Banque
 	class Operations
 	{
 	public:
-		~Operations();
+		virtual ~Operations();
 		Operations(Devise*, Compte* c);
 		virtual void afficherDetail()const=0;
 		void detailsTransac()const;

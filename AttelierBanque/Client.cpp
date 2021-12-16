@@ -31,5 +31,8 @@ void Client::Afficher()
 
 Banque::Client::~Client()
 {
-	this->listeComptes.clear();
+	for (int i = 0; i < this->listeComptes.size(); i++)
+	{
+		delete listeComptes[i];
+	}
 }

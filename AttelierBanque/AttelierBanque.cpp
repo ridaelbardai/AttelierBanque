@@ -27,8 +27,7 @@ int main()
 	Client* c1 = new Client("toto", "toto", "addresse toto");
 	Client* c2 = new Client("momo", "momo", "addresse momo");
 
-	Dirhame* mad1 = new Dirhame(70);
-
+	
 	c1->ajouterCompte(cmpt1);
 	c2->ajouterCompte(cmpt2);
 
@@ -39,7 +38,6 @@ int main()
 		c1->Afficher();
 		c2->Afficher();
 
-	cout << "\n\n\n\n";
 	delete c1, c2;
 	
 }

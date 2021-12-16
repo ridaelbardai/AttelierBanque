@@ -99,10 +99,14 @@ void Banque::Compte::afficherhistorique() const
 
 Compte::~Compte() {
 
-	if (this->titulaire != nullptr && this->ref->decr() == 0)
+	if (this->titulaire != nullptr)
 	{
-		delete this->titulaire;
-		this->titulaire = nullptr;
+		for (int i = 0; i < this->historique.size(); i++)
+		{
+			delete historique[i];
+		}
+		delete solde;
+		delete ref;
 	}
 
 }

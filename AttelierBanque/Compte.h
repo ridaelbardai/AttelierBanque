@@ -31,7 +31,7 @@ namespace Banque {
 		bool verser(Devise* M, Compte& C);
 		void consulter()const;
 		void afficherhistorique()const;
-		~Compte();
+		virtual ~Compte();
 	protected: Devise& pourcentage(double a) const;
 	protected: bool checkSup(Devise *s) const;
 			   void debiter_direct(Devise* M);
