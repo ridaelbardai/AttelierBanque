@@ -14,6 +14,7 @@ namespace Banque
 		Operations(Devise*, Compte* c);
 		virtual void afficherDetail()const=0;
 		void detailsTransac()const;
+		~Operations();
 	private:
 		const int num;
 		static int cpt;

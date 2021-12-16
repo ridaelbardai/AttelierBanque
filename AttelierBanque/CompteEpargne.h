@@ -5,7 +5,7 @@ namespace Banque {
 	class CompteEpargne :virtual public Compte
 	{
 	public:
-		CompteEpargne(Client* c, Devise* s, double t);
+		CompteEpargne( Devise* s, double t);
 		void calculInteret();
 
 	private:

@@ -12,9 +12,14 @@ Banque::Operations::Operations(Devise* m, Compte* c) :num(++cpt)
 
 void Banque::Operations::detailsTransac() const
 {
-	cout << "Date : " << date << endl;
-	cout << "Transaction num: " << this->num << endl;
-	cout << "Montant de l'op :"; this->montant->afficher();
-	cout << "\n--------------------------------\n\n";
+	cout << "\n\t\tDate : " << date << endl;
+	cout << "\t\tTransaction num: " << this->num << endl;
+	cout << "\t\tMontant de l'op :"; this->montant->afficher();
+	cout << "\n\t\t---------------------\n";
+}
+
+Banque::Operations::~Operations()
+{
+	delete montant;
 }
 
